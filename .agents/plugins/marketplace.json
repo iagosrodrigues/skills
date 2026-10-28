@@ -1,0 +1,20 @@
+{
+  "name": "noam",
+  "interface": {
+    "displayName": "Noam"
+  },
+  "plugins": [
+    {
+      "name": "noam-plugin",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

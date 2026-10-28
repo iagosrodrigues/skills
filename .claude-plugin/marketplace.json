@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "noam",
+  "owner": {
+    "name": "Iago Sousa"
+  },
+  "metadata": {
+    "description": "Iago Sousa's personal skills and commands."
+  },
+  "plugins": [
+    {
+      "name": "noam-plugin",
+      "source": "./",
+      "description": "just my collection of skills and commands.",
+      "category": "productivity"
+    }
+  ]
+}
