@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "noam-plugin",
+  "version": "0.0.1",
+  "description": "just my collection of skills and commands.",
+  "author": {
+    "name": "Iago Sousa"
+  },
+  "homepage": "https://github.com/iagosrodrigues/skills",
+  "repository": "https://github.com/iagosrodrigues/skills",
+  "license": "MIT",
+  "keywords": []
+}
