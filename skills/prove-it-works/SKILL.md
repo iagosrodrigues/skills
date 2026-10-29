@@ -28,6 +28,8 @@ Run required repository checks as well. Build, lint, and unit tests provide usef
 
 Keep effort proportional to the change and risk. Do not create a broad harness or a brittle test merely to satisfy a ritual. A small repeatable script is useful when it makes the claim easier to check. For a trivial static edit, direct inspection and a relevant validation may be enough.
 
+When a test's sensitivity or coupling is uncertain, read [test behavior, not implementation](../principle-test-behavior-not-implementation/SKILL.md). Do not require a new test or mutation probe for every verification task; use it where the doubt affects the claimed evidence.
+
 ## Execute and inspect
 
 Run the selected check and inspect its actual result. Capture the command or interaction, expected result, observed result, and relevant output or artifact path. Check that the intended code path ran and that an error, skipped action, stale screenshot, or cached result did not create a false pass. Inspect delegated evidence before using it in the verdict.

@@ -23,6 +23,18 @@ claude plugin install noam-plugin@noam
 
 - [`maintain-verification-skill`](skills/maintain-verification-skill/SKILL.md) audits an existing verification procedure with parallel source-reading subagents per feature and one coordinator driving the app. It repairs instructions and owned helpers, reports blocked coverage, and opens a PR only when requested.
 
+- [`correct`](skills/correct/SKILL.md) prevents recurring agent mistakes through architecture, types, actionable checks, and behavioral tests, proving that enforcement rejects the recorded mistake.
+
+- [`swarm`](skills/swarm/SKILL.md) coordinates parallel subagents across task slices or competing approaches, with isolated ownership, evidence checks, and validation of the integrated result.
+
+- [`architect`](skills/architect/SKILL.md) grounds nontrivial changes and compares independent designs before synthesizing caller usage, types, and module boundaries.
+
+- [`arena`](skills/arena/SKILL.md) compares independent candidate artifacts, obtains a read-only judgment, and synthesizes a verified result.
+
+- [`show-me-your-work`](skills/show-me-your-work/SKILL.md) keeps an append-only decision trail, audits evidence, and requests independent review before handoff.
+
+- [`guide-me`](skills/guide-me/SKILL.md) guides an end-to-end task through the relevant bundled workflows, from onboarding to verified delivery.
+
 Example request after loading `how`:
 
 ```text
@@ -67,6 +79,48 @@ Informe evidências, bloqueios e quais jornadas não conseguiu executar.
 Não faça commit nem abra PR.
 ```
 
+Example request after loading `correct`:
+
+```text
+Investigue erros recorrentes nas correções recentes deste projeto.
+Para os padrões comprovados, implemente a prevenção mais adequada:
+arquitetura, tipos, lint ou testes; documentação por último.
+Mostre evidências das ocorrências e prove que o guardrail rejeita o erro.
+```
+
+Example request after loading `swarm`:
+
+```text
+Use subagentes em paralelo para implementar esta tarefa: [objetivo].
+Defina os critérios de conclusão, distribua arquivos sem sobreposição,
+integre as mudanças e valide o resultado combinado.
+Informe as evidências e qualquer parte bloqueada.
+```
+
+Example request after loading `architect`:
+
+```text
+Desenhe a arquitetura para [objetivo]. Compare duas estruturas distintas com subagentes. Mostre uso, tipos, limites dos módulos e tradeoffs. Pare antes de implementar.
+```
+
+Example request after loading `arena`:
+
+```text
+Use a arena para produzir [artefato]. Gere candidatos independentes, compare com critérios concretos e sintetize a melhor solução. Mostre a verificação final.
+```
+
+Example request after loading `show-me-your-work`:
+
+```text
+Mantenha uma trilha de decisões para esta tarefa, com evidências. Antes de encerrar, audite o registro e peça uma revisão independente dos riscos e lacunas.
+```
+
+Example request after loading `guide-me`:
+
+```text
+Sou novo neste projeto. Guie-me até implementar [objetivo]: explique o fluxo relevante, escolha as etapas necessárias, implemente e verifique. Avance no trabalho local e me consulte nas decisões de produto que estiverem faltando.
+```
+
 These skills use shared `SKILL.md` instructions for Codex and Claude Code, without Cursor-specific tool names or model identifiers.
 
 `how` is adapted from [pstack's how skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/how/SKILL.md) and its explanation templates, by Lauren Tan. The upstream [MIT license](skills/how/LICENSE) is preserved alongside the skill.
@@ -78,6 +132,47 @@ These skills use shared `SKILL.md` instructions for Codex and Claude Code, witho
 `interrogate` is adapted from [pstack's interrogate skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/interrogate/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/interrogate/LICENSE) is preserved alongside the skill.
 
 `maintain-verification-skill` is adapted from [pstack's verification skill maintenance workflow](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/maintain-verification-skill/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/maintain-verification-skill/LICENSE) is preserved alongside the skill.
+
+`correct` is adapted from [pstack's correct skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/correct/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/correct/LICENSE) is preserved alongside the skill.
+
+`swarm` is adapted from [pstack's swarm skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/swarm/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/swarm/LICENSE) is preserved alongside the skill.
+
+`architect` is adapted from [pstack's architect skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/architect/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/architect/LICENSE) is preserved alongside the skill.
+
+`arena` is adapted from [pstack's arena skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/arena/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/arena/LICENSE) is preserved alongside the skill.
+
+`show-me-your-work` is adapted from [pstack's show-me-your-work skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/show-me-your-work/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/show-me-your-work/LICENSE) is preserved alongside the skill.
+
+`guide-me` is a scoped adaptation of the workflow routing in [pstack's poteto-mode skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/poteto-mode/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/guide-me/LICENSE) is preserved alongside the skill.
+
+`guide-me` composes the ported workflows; it does not include the upstream mode's full playbook suite or platform-specific automation.
+
+## Code-quality principles
+
+These are canonical principle skills, usable directly or loaded on demand by workflows. They guide decisions; they do not authorize a refactor or replace verification. `guide-me` includes a [code-quality workflow](skills/guide-me/references/code-quality.md) that starts with maintenance evidence and applies only the relevant principles.
+
+| Principle | Decision it helps make |
+| --- | --- |
+| [Minimize reader load](skills/principle-minimize-reader-load/SKILL.md) | Reduce unnecessary indirection and hidden mutable context. |
+| [Laziness protocol](skills/principle-laziness-protocol/SKILL.md) | Choose the smallest coherent correction without speculative machinery. |
+| [Subtract before you add](skills/principle-subtract-before-you-add/SKILL.md) | Remove proven obsolete structure before extending it. |
+| [Model the domain](skills/principle-model-the-domain/SKILL.md) | Encode real states and invariants in data and ownership. |
+| [Boundary discipline](skills/principle-boundary-discipline/SKILL.md) | Establish validation and error contracts at actual trust boundaries. |
+| [Test behavior, not implementation](skills/principle-test-behavior-not-implementation/SKILL.md) | Protect observable contracts while allowing internal refactoring. |
+
+Example request after loading `guide-me`:
+
+```text
+Avalie a qualidade estrutural do fluxo [X], sem editar ainda.
+Mostre onde a estrutura dificulta uma mudança concreta e compare manter,
+corrigir localmente ou refatorar. Priorize até três oportunidades.
+Diferencie evidências de preferências de estilo e indique como preservar
+os comportamentos antes de propor a implementação.
+```
+
+`architect` selects design principles as needed; `correct` and `prove-it-works` consult the behavior-testing principle when evaluating checks. The principle bodies remain the source of truth, rather than being copied into each workflow.
+
+These six principles are adapted from Lauren Tan's pstack principles: [`principle-minimize-reader-load`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-minimize-reader-load/SKILL.md) ([MIT license](skills/principle-minimize-reader-load/LICENSE)), [`principle-laziness-protocol`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-laziness-protocol/SKILL.md) ([MIT license](skills/principle-laziness-protocol/LICENSE)), [`principle-subtract-before-you-add`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-subtract-before-you-add/SKILL.md) ([MIT license](skills/principle-subtract-before-you-add/LICENSE)), [`principle-model-the-domain`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-model-the-domain/SKILL.md) ([MIT license](skills/principle-model-the-domain/LICENSE)), [`principle-boundary-discipline`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-boundary-discipline/SKILL.md) ([MIT license](skills/principle-boundary-discipline/LICENSE)), [`principle-test-behavior-not-implementation`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-test-behavior-not-implementation/SKILL.md) ([MIT license](skills/principle-test-behavior-not-implementation/LICENSE)). Runtime trust, compatibility, and task scope qualify the upstream absolutes.
 
 ## Layout
 
