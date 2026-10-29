@@ -24,6 +24,7 @@ Bundled skills are sibling directories. Resolve them relative to this file as `.
 | Competing artifact approaches | `arena`: generate independently, judge, synthesize, and verify. |
 | Independent task slices worth parallelizing | `swarm`: assign ownership, isolate writes and runtime state, integrate and check. |
 | Adversarial review or consequential contested change | `interrogate`: reproduce candidate defects and distinguish confirmed findings from risks. |
+| Redundant or misleading comments, prose-only constraints, or suppression cleanup | `no-comments`: independent comment review, scoped cleanup, and verification of affected directives or contracts. |
 | Result ready to be claimed | `prove-it-works`: check the actual deliverable against acceptance criteria. |
 | Missing reusable verification procedure | `create-verification-skill`, when creating that procedure is part of the requested work. |
 | Stale verification procedure or feature map | `maintain-verification-skill`, when maintenance is in scope. |

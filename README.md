@@ -35,6 +35,8 @@ claude plugin install noam-plugin@noam
 
 - [`guide-me`](skills/guide-me/SKILL.md) guides an end-to-end task through the relevant bundled workflows, from onboarding to verified delivery.
 
+- [`no-comments`](skills/no-comments/SKILL.md) reviews comment quality with an independent reader, removes confirmed noise, preserves meaningful rationale and tool directives, and proves constraint enforcement before dropping reminders.
+
 Example request after loading `how`:
 
 ```text
@@ -121,6 +123,16 @@ Example request after loading `guide-me`:
 Sou novo neste projeto. Guie-me até implementar [objetivo]: explique o fluxo relevante, escolha as etapas necessárias, implemente e verifique. Avance no trabalho local e me consulte nas decisões de produto que estiverem faltando.
 ```
 
+Example request after loading `no-comments`:
+
+```text
+Revise os comentários do diff com um subagente independente.
+Remova narração redundante e corrija afirmações comprovadamente obsoletas.
+Preserve razões úteis, contratos, avisos ainda não resolvidos e diretivas.
+Proponha guardrails para restrições importantes; não refatore o produto ainda.
+Verifique o que os comentários alterados influenciam.
+```
+
 These skills use shared `SKILL.md` instructions for Codex and Claude Code, without Cursor-specific tool names or model identifiers.
 
 `how` is adapted from [pstack's how skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/how/SKILL.md) and its explanation templates, by Lauren Tan. The upstream [MIT license](skills/how/LICENSE) is preserved alongside the skill.
@@ -173,6 +185,8 @@ os comportamentos antes de propor a implementação.
 `architect` selects design principles as needed; `correct` and `prove-it-works` consult the behavior-testing principle when evaluating checks. The principle bodies remain the source of truth, rather than being copied into each workflow.
 
 These six principles are adapted from Lauren Tan's pstack principles: [`principle-minimize-reader-load`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-minimize-reader-load/SKILL.md) ([MIT license](skills/principle-minimize-reader-load/LICENSE)), [`principle-laziness-protocol`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-laziness-protocol/SKILL.md) ([MIT license](skills/principle-laziness-protocol/LICENSE)), [`principle-subtract-before-you-add`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-subtract-before-you-add/SKILL.md) ([MIT license](skills/principle-subtract-before-you-add/LICENSE)), [`principle-model-the-domain`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-model-the-domain/SKILL.md) ([MIT license](skills/principle-model-the-domain/LICENSE)), [`principle-boundary-discipline`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-boundary-discipline/SKILL.md) ([MIT license](skills/principle-boundary-discipline/LICENSE)), [`principle-test-behavior-not-implementation`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-test-behavior-not-implementation/SKILL.md) ([MIT license](skills/principle-test-behavior-not-implementation/LICENSE)). Runtime trust, compatibility, and task scope qualify the upstream absolutes.
+
+`no-comments` is adapted from [pstack's no-comments workflow](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/no-comments/SKILL.md) and [Comment Sicko reviewer](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/agents/comment-sicko.md), by Lauren Tan. Its upstream [MIT license](skills/no-comments/LICENSE) is preserved alongside the skill. The port retains independent review while using evidence-based deletion, preserving unresolved constraints and tool-consumed comments.
 
 ## Layout
 
