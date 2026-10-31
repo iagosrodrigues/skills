@@ -16,3 +16,5 @@ Before adopting a new model, walk realistic caller usage and at least one invali
 For a migration, inspect persisted data and external consumers as well as in-memory callers. Preserve required compatibility and define how existing states convert. Do not claim compiler enforcement for states that still enter through unchecked casts or unvalidated inputs.
 
 Prefer boring, local code when the existing shape is clear. Add structure only when it reduces a concrete domain problem; verify observable behavior after the change. Explain the invariant and the decision it changed in the user's language.
+
+When choosing compiler-enforced representations, read [type system discipline](../principle-type-system-discipline/SKILL.md) for semantic types, exhaustive variants, and schema ownership.
