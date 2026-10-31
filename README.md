@@ -43,6 +43,8 @@ claude plugin install noam-plugin@noam
 
 - [`blast-radius`](skills/blast-radius/SKILL.md) traces downstream impact beyond direct callers and tests the critical assumptions that make a change safe.
 
+- [`reflect`](skills/reflect/SKILL.md) reviews session evidence through judgment, tooling, and divergent lenses, then proposes concrete skill improvements or structural backlog with independent synthesis.
+
 Example request after loading `how`:
 
 ```text
@@ -164,6 +166,15 @@ Mostre evidências, riscos ainda não comprovados e cenários descartados.
 Não aplique correções no produto.
 ```
 
+Example request after loading `reflect`:
+
+```text
+Reflita sobre esta sessão com três revisores independentes.
+Identifique aprendizados duráveis e confira as skills antes de propor alterações.
+Mostre o texto e o destino das propostas, rejeições e backlog estrutural.
+Não aplique mudanças nem abra tickets ainda.
+```
+
 These skills use shared `SKILL.md` instructions for Codex and Claude Code, without Cursor-specific tool names or model identifiers.
 
 `how` is adapted from [pstack's how skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/how/SKILL.md) and its explanation templates, by Lauren Tan. The upstream [MIT license](skills/how/LICENSE) is preserved alongside the skill.
@@ -224,6 +235,8 @@ These six principles are adapted from Lauren Tan's pstack principles: [`principl
 `why` is adapted from [pstack's why skill and references](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/why/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/why/LICENSE) is preserved alongside the skill.
 
 `blast-radius` is adapted from [pstack's blast-radius skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/blast-radius/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/blast-radius/LICENSE) is preserved alongside the skill.
+
+`reflect` is adapted from [pstack's reflect skill and reviewer prompts](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/reflect/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/reflect/LICENSE) is preserved alongside the skill. Backlog publication is explicit, and edits target maintained sources rather than plugin caches.
 
 ## Layout
 
