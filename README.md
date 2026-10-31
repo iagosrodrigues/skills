@@ -229,6 +229,7 @@ These are canonical principle skills, usable directly or loaded on demand by wor
 | [Make operations idempotent](skills/principle-make-operations-idempotent/SKILL.md) | Make repeated and interrupted operations converge without duplicating effects. |
 | [Separate before serializing shared state](skills/principle-separate-before-serializing-shared-state/SKILL.md) | Separate concurrent writers before introducing locks or shared-state coordination. |
 | [Migrate callers then delete legacy APIs](skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md) | Migrate controlled consumers and remove obsolete APIs without breaking supported compatibility. |
+| [Sequence verifiable units](skills/principle-sequence-verifiable-units/SKILL.md) | Sequence multi-step work into coherent, checked units and verify their integration. |
 | [Attack the premise](skills/principle-attack-the-premise/SKILL.md) | Test the shared assumption behind repeated failed corrections before another patch. |
 | [Fix root causes](skills/principle-fix-root-causes/SKILL.md) | Trace the earliest demonstrated contract violation while retaining legitimate safeguards. |
 | [Minimize reader load](skills/principle-minimize-reader-load/SKILL.md) | Reduce unnecessary indirection and hidden mutable context. |

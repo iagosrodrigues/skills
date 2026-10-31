@@ -46,6 +46,8 @@ For AI slop, structural maintenance concerns, or refactoring an established proj
 
 ## Execute in verifiable units
 
+For sweeps, migrations, or dependent multi-step changes, read [sequence verifiable units](../principle-sequence-verifiable-units/SKILL.md). Choose coherent checkpoints and verify each prerequisite before building on it.
+
 For commands, jobs, or lifecycle changes that must survive retries or partial failure, read [make operations idempotent](../principle-make-operations-idempotent/SKILL.md) and verify both final state and external effects.
 
 For debugging, read [fix root causes](../principle-fix-root-causes/SKILL.md) when the causal origin or need for a guard is unclear.
