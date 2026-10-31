@@ -31,6 +31,8 @@ When choosing between a local correction and more machinery, consult [laziness p
 
 For a recurring defect whose cause is not established, read [fix root causes](../principle-fix-root-causes/SKILL.md) before encoding a rule around its visible symptom.
 
+If successive corrections fail the same check under a shared assumption, use [attack the premise](../principle-attack-the-premise/SKILL.md) before adding another guardrail based on that assumption.
+
 ## Fix and prove
 
 Correct the scoped instances and add the selected enforcement. Keep each mistake class reviewable as a coherent change; make separate commits only if commits were requested.

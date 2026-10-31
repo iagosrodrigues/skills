@@ -51,7 +51,7 @@ For a bug, reproduce the reported behavior when practical, establish the intende
 
 Delegate only independent work with self-contained briefs, target state, file ownership, execution boundaries, evidence expectations, and a completion condition. Never let concurrent workers silently share write paths or mutable app state. Review delegated outputs and run checks against the integrated result. Model agreement does not replace execution evidence.
 
-When a check fails, inspect the target and the check before changing either. Do not weaken expectations, hide a regression in documentation, or extend the task into unrelated repairs. Repeated failures resting on one premise call for testing that premise, not another patch that assumes it. Keep retries bounded; report persistent blockers and complete unaffected work.
+When a check fails, inspect the target and the check before changing either. Do not weaken expectations, hide a regression in documentation, or extend the task into unrelated repairs. When two or more corrections share a premise and fail the same check, read [attack the premise](../principle-attack-the-premise/SKILL.md) and test the assumption before another patch based on it. Keep retries bounded; report persistent blockers and complete unaffected work.
 
 ## Autonomy and checkpoints
 

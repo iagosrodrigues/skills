@@ -236,6 +236,7 @@ These are canonical principle skills, usable directly or loaded on demand by wor
 
 | Principle | Decision it helps make |
 | --- | --- |
+| [Attack the premise](skills/principle-attack-the-premise/SKILL.md) | Test the shared assumption behind repeated failed corrections before another patch. |
 | [Fix root causes](skills/principle-fix-root-causes/SKILL.md) | Trace the earliest demonstrated contract violation while retaining legitimate safeguards. |
 | [Minimize reader load](skills/principle-minimize-reader-load/SKILL.md) | Reduce unnecessary indirection and hidden mutable context. |
 | [Laziness protocol](skills/principle-laziness-protocol/SKILL.md) | Choose the smallest coherent correction without speculative machinery. |
@@ -275,6 +276,8 @@ These six principles are adapted from Lauren Tan's pstack principles: [`principl
 `unslop` is adapted from [pstack's unslop skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/unslop/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/unslop/LICENSE) is preserved alongside the skill.
 
 `principle-fix-root-causes` is adapted from [pstack's Fix root causes principle](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-fix-root-causes/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/principle-fix-root-causes/LICENSE) is preserved alongside the skill.
+
+`principle-attack-the-premise` is adapted from [pstack's Attack the premise principle](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-attack-the-premise/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/principle-attack-the-premise/LICENSE) is preserved alongside the skill.
 
 ## Layout
 
