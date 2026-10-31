@@ -29,6 +29,8 @@ Use existing tools and repository conventions. Do not require a particular agent
 
 When choosing between a local correction and more machinery, consult [laziness protocol](../principle-laziness-protocol/SKILL.md). When adding or assessing regression protection, consult [test behavior, not implementation](../principle-test-behavior-not-implementation/SKILL.md). Read a selected principle before applying it and connect it to the actual failure class rather than appending generic rules.
 
+For a recurring defect whose cause is not established, read [fix root causes](../principle-fix-root-causes/SKILL.md) before encoding a rule around its visible symptom.
+
 ## Fix and prove
 
 Correct the scoped instances and add the selected enforcement. Keep each mistake class reviewable as a coherent change; make separate commits only if commits were requested.

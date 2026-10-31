@@ -45,6 +45,8 @@ For AI slop, structural maintenance concerns, or refactoring an established proj
 
 ## Execute in verifiable units
 
+For debugging, read [fix root causes](../principle-fix-root-causes/SKILL.md) when the causal origin or need for a guard is unclear.
+
 For a bug, reproduce the reported behavior when practical, establish the intended contract, trace the cause, make a scoped correction, and repeat the scenario. Distinguish setup failures from product defects. For a feature, define observable acceptance criteria and the data shape before implementing. For a refactor, verify behavior remains equivalent through affected public interfaces. A design-only or read-only task stays within those bounds.
 
 Delegate only independent work with self-contained briefs, target state, file ownership, execution boundaries, evidence expectations, and a completion condition. Never let concurrent workers silently share write paths or mutable app state. Review delegated outputs and run checks against the integrated result. Model agreement does not replace execution evidence.
