@@ -41,6 +41,8 @@ claude plugin install noam-plugin@noam
 
 - [`why`](skills/why/SKILL.md) investigates historical rationale through parallel source readers and independent synthesis, with cited confidence levels and explicit coverage gaps.
 
+- [`blast-radius`](skills/blast-radius/SKILL.md) traces downstream impact beyond direct callers and tests the critical assumptions that make a change safe.
+
 Example request after loading `how`:
 
 ```text
@@ -153,6 +155,15 @@ Use o histórico e as fontes disponíveis, com investigadores em paralelo.
 Separe motivos documentados, inferências e lacunas. Não altere o código.
 ```
 
+Example request after loading `blast-radius`:
+
+```text
+Investigue o que este diff pode quebrar fora dos arquivos alterados.
+Identifique as premissas críticas e execute verificações focadas no código real.
+Mostre evidências, riscos ainda não comprovados e cenários descartados.
+Não aplique correções no produto.
+```
+
 These skills use shared `SKILL.md` instructions for Codex and Claude Code, without Cursor-specific tool names or model identifiers.
 
 `how` is adapted from [pstack's how skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/how/SKILL.md) and its explanation templates, by Lauren Tan. The upstream [MIT license](skills/how/LICENSE) is preserved alongside the skill.
@@ -211,6 +222,8 @@ These six principles are adapted from Lauren Tan's pstack principles: [`principl
 `setup` is adapted from [pstack's setup-pstack skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/setup-pstack/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/setup/LICENSE) is preserved alongside the skill. This port uses one shared model and separate effort settings, with project instruction discovery instead of a platform-specific global rule.
 
 `why` is adapted from [pstack's why skill and references](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/why/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/why/LICENSE) is preserved alongside the skill.
+
+`blast-radius` is adapted from [pstack's blast-radius skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/blast-radius/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/blast-radius/LICENSE) is preserved alongside the skill.
 
 ## Layout
 
