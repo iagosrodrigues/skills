@@ -25,6 +25,8 @@ Subagents are required for a swarm. If unavailable, report the limitation and co
 
 ## Assign ownership and evidence
 
+When workers may share a mutable target, read [separate before serializing shared state](../principle-separate-before-serializing-shared-state/SKILL.md) before choosing isolation or synchronization. Include resources outside the checkout in that decision.
+
 Give every worker a self-contained brief containing:
 
 - Goal, completion criteria, repository and relevant instructions.
