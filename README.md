@@ -45,6 +45,8 @@ claude plugin install noam-plugin@noam
 
 - [`reflect`](skills/reflect/SKILL.md) reviews session evidence through judgment, tooling, and divergent lenses, then proposes concrete skill improvements or structural backlog with independent synthesis.
 
+- [`benchmark-checklist`](skills/benchmark-checklist/SKILL.md) validates performance claims through real-work checks, correct outputs, comparable tuning, bottleneck evidence, repeated runs, and end-to-end relevance.
+
 Example request after loading `how`:
 
 ```text
@@ -175,6 +177,15 @@ Mostre o texto e o destino das propostas, rejeições e backlog estrutural.
 Não aplique mudanças nem abra tickets ainda.
 ```
 
+Example request after loading `benchmark-checklist`:
+
+```text
+Compare o desempenho de [baseline] e [candidato] no cenário [X].
+Confira o trabalho executado, a correção dos resultados e as configurações.
+Repita as medições, investigue o gargalo e mostre os dados e as limitações.
+Não execute carga em produção.
+```
+
 These skills use shared `SKILL.md` instructions for Codex and Claude Code, without Cursor-specific tool names or model identifiers.
 
 `how` is adapted from [pstack's how skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/how/SKILL.md) and its explanation templates, by Lauren Tan. The upstream [MIT license](skills/how/LICENSE) is preserved alongside the skill.
@@ -237,6 +248,8 @@ These six principles are adapted from Lauren Tan's pstack principles: [`principl
 `blast-radius` is adapted from [pstack's blast-radius skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/blast-radius/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/blast-radius/LICENSE) is preserved alongside the skill.
 
 `reflect` is adapted from [pstack's reflect skill and reviewer prompts](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/reflect/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/reflect/LICENSE) is preserved alongside the skill. Backlog publication is explicit, and edits target maintained sources rather than plugin caches.
+
+`benchmark-checklist` is adapted from [pstack's benchmark checklist](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/benchmark-checklist/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/benchmark-checklist/LICENSE) is preserved alongside the skill.
 
 ## Layout
 

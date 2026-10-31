@@ -36,7 +36,7 @@ Run the selected check and inspect its actual result. Capture the command or int
 
 For a bug fix, reproduce the failure before the fix when practical, then run the same scenario after it. Use an isolated baseline checkout if needed; never discard the user's changes to reconstruct the old state. If a failing-before run is unavailable, say so and limit the claim to what the after check establishes.
 
-For a behavior-preserving change, compare equivalent inputs and outputs before and after. For a performance claim, use comparable conditions and repeated measurements; do not claim improvement when the effect cannot be distinguished from noise.
+For a behavior-preserving change, compare equivalent inputs and outputs before and after. For a performance claim, use comparable conditions and repeated measurements; do not claim improvement when the effect cannot be distinguished from noise. Use the bundled [benchmark checklist](../benchmark-checklist/SKILL.md) when producing or evaluating a measured performance comparison.
 
 When a check fails, inspect both the observation method and the target before deciding the cause. Do not weaken assertions, replace a baseline, or skip a required scenario to obtain a pass. Change an expectation only when evidence shows the intended contract changed, and explain that change.
 

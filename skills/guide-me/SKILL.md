@@ -28,6 +28,7 @@ Bundled skills are sibling directories. Resolve them relative to this file as `.
 | Redundant or misleading comments, prose-only constraints, or suppression cleanup | `no-comments`: independent comment review, scoped cleanup, and verification of affected directives or contracts. |
 | Downstream compatibility or unclear impact beyond a diff | `blast-radius`: trace indirect consumers and execute checks of the critical safety assumptions. |
 | Requested retrospective on agent execution or skill improvement | `reflect`: three review lenses, independent synthesis, and concrete proposals before authorized skill edits. |
+| Performance measurement, regression, or implementation comparison | `benchmark-checklist`: verify workload, correctness, tuning, bottlenecks, repetitions, and user-visible relevance before trusting the number. |
 | Result ready to be claimed | `prove-it-works`: check the actual deliverable against acceptance criteria. |
 | Missing reusable verification procedure | `create-verification-skill`, when creating that procedure is part of the requested work. |
 | Stale verification procedure or feature map | `maintain-verification-skill`, when maintenance is in scope. |
