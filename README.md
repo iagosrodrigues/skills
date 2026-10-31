@@ -49,6 +49,8 @@ claude plugin install noam-plugin@noam
 
 - [`technical-writing`](skills/technical-writing/SKILL.md) structures technical documents around the reader's task and checks instructions, terminology, and factual claims.
 
+- [`unslop`](skills/unslop/SKILL.md) edits prose for clarity and specificity while preserving meaning, literal technical content, evidence, and uncertainty.
+
 Example request after loading `how`:
 
 ```text
@@ -195,6 +197,13 @@ Escreva a documentação de [X] para [público], com comandos e exemplos verific
 Escolha a estrutura adequada e indique o que não conseguiu confirmar.
 ```
 
+Example request after loading `unslop`:
+
+```text
+Revise este texto para remover linguagem vaga, repetição e jargão desnecessário.
+Preserve os fatos, as condições, as referências e o grau de certeza.
+```
+
 These skills use shared `SKILL.md` instructions for Codex and Claude Code, without Cursor-specific tool names or model identifiers.
 
 `how` is adapted from [pstack's how skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/how/SKILL.md) and its explanation templates, by Lauren Tan. The upstream [MIT license](skills/how/LICENSE) is preserved alongside the skill.
@@ -261,6 +270,8 @@ These six principles are adapted from Lauren Tan's pstack principles: [`principl
 `benchmark-checklist` is adapted from [pstack's benchmark checklist](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/benchmark-checklist/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/benchmark-checklist/LICENSE) is preserved alongside the skill.
 
 `technical-writing` is adapted from [pstack's technical-writing skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/technical-writing/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/technical-writing/LICENSE) is preserved alongside the skill.
+
+`unslop` is adapted from [pstack's unslop skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/unslop/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/unslop/LICENSE) is preserved alongside the skill.
 
 ## Layout
 

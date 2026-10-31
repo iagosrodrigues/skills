@@ -50,3 +50,5 @@ For a PR, describe the concrete problem and resulting behavior, then relevant ve
 Product UI strings follow the product's copy conventions. A documentation task does not authorize unrelated product edits, public posting, or changes to other writing skills. Keep suggestions outside scope separate from applied edits.
 
 Before delivery, check that the reader can find the main point, follow the instructions, and distinguish facts from interpretation. Remove repetition and unsupported claims without losing requirements. Report the artifact, substantive changes, checks performed, and remaining factual gaps when relevant; for a simple rewrite, return the rewritten text directly.
+
+Use the bundled [unslop](../unslop/SKILL.md) for a final clarity pass when available. Preserve factual caveats, required terminology, and the document's intended mode.
