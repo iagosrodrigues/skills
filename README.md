@@ -35,6 +35,8 @@ claude plugin install noam-plugin@noam
 
 - [`guide-me`](skills/guide-me/SKILL.md) guides an end-to-end task through the relevant bundled workflows, from onboarding to verified delivery.
 
+- [`code-gardening`](skills/code-gardening/SKILL.md) makes one evidence-backed maintenance improvement at a time, applies the relevant principles, and verifies preserved behavior and reduced reader load.
+
 - [`no-comments`](skills/no-comments/SKILL.md) applies strict comment deletion with a narrow keep list, an independent editing reviewer, scoped root-cause fixes, and explicit reporting of unenforced constraints.
 
 - [`setup`](skills/setup/SKILL.md) configures one shared model and reasoning effort per role in a project-local `.noam.json`, with a managed project-instruction block for discovery and explicit runtime capability checks.
@@ -135,6 +137,15 @@ Example request after loading `guide-me`:
 
 ```text
 Sou novo neste projeto. Guie-me até implementar [objetivo]: explique o fluxo relevante, escolha as etapas necessárias, implemente e verifique. Avance no trabalho local e me consulte nas decisões de produto que estiverem faltando.
+```
+
+Example request after loading `code-gardening`:
+
+```text
+Faça uma rodada de code gardening no fluxo [X]. Identifique um obstáculo
+concreto de manutenção, escolha uma melhoria pequena e preserve os contratos.
+Implemente, verifique o comportamento e mostre o que ficou mais fácil de entender.
+Se não houver ganho justificável, explique e não altere o código.
 ```
 
 Example request after loading `no-comments`:

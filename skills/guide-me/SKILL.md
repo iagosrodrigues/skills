@@ -25,6 +25,7 @@ Bundled skills are sibling directories. Resolve them relative to this file as `.
 | Competing artifact approaches | `arena`: generate independently, judge, synthesize, and verify. |
 | Independent task slices worth parallelizing | `swarm`: assign ownership, isolate writes and runtime state, integrate and check. |
 | Adversarial review or consequential contested change | `interrogate`: reproduce candidate defects and distinguish confirmed findings from risks. |
+| Incremental code gardening or a bounded maintenance improvement | `code-gardening`: choose one source-backed obstacle, apply relevant principles, preserve contracts, and compare the same flow before and after. |
 | Redundant or misleading comments, prose-only constraints, or suppression cleanup | `no-comments`: independent comment review, scoped cleanup, and verification of affected directives or contracts. |
 | Downstream compatibility or unclear impact beyond a diff | `blast-radius`: trace indirect consumers and execute checks of the critical safety assumptions. |
 | Requested retrospective on agent execution or skill improvement | `reflect`: three review lenses, independent synthesis, and concrete proposals before authorized skill edits. |
