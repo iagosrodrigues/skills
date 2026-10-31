@@ -47,6 +47,8 @@ claude plugin install noam-plugin@noam
 
 - [`benchmark-checklist`](skills/benchmark-checklist/SKILL.md) validates performance claims through real-work checks, correct outputs, comparable tuning, bottleneck evidence, repeated runs, and end-to-end relevance.
 
+- [`technical-writing`](skills/technical-writing/SKILL.md) structures technical documents around the reader's task and checks instructions, terminology, and factual claims.
+
 Example request after loading `how`:
 
 ```text
@@ -186,6 +188,13 @@ Repita as medições, investigue o gargalo e mostre os dados e as limitações.
 Não execute carga em produção.
 ```
 
+Example request after loading `technical-writing`:
+
+```text
+Escreva a documentação de [X] para [público], com comandos e exemplos verificados.
+Escolha a estrutura adequada e indique o que não conseguiu confirmar.
+```
+
 These skills use shared `SKILL.md` instructions for Codex and Claude Code, without Cursor-specific tool names or model identifiers.
 
 `how` is adapted from [pstack's how skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/how/SKILL.md) and its explanation templates, by Lauren Tan. The upstream [MIT license](skills/how/LICENSE) is preserved alongside the skill.
@@ -250,6 +259,8 @@ These six principles are adapted from Lauren Tan's pstack principles: [`principl
 `reflect` is adapted from [pstack's reflect skill and reviewer prompts](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/reflect/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/reflect/LICENSE) is preserved alongside the skill. Backlog publication is explicit, and edits target maintained sources rather than plugin caches.
 
 `benchmark-checklist` is adapted from [pstack's benchmark checklist](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/benchmark-checklist/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/benchmark-checklist/LICENSE) is preserved alongside the skill.
+
+`technical-writing` is adapted from [pstack's technical-writing skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/technical-writing/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/technical-writing/LICENSE) is preserved alongside the skill.
 
 ## Layout
 
