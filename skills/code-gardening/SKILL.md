@@ -35,6 +35,8 @@ Before editing, state the obstacle, the chosen intervention, the observable beha
 
 ## Preserve contracts while gardening
 
+When replacing an internal API, read [migrate callers then delete legacy APIs](../principle-migrate-callers-then-delete-legacy-apis/SKILL.md) to distinguish coordinated deletion from required staged compatibility.
+
 Use existing focused checks to establish a baseline. Add a small behavior check when an exposed contract lacks meaningful protection and the change warrants it. Record pre-existing failures separately; a baseline failure does not authorize unrelated repairs.
 
 Inspect consumers before removing code: static references alone miss dynamic registration, public exports, configuration, deployment variants, and external users. Preserve supported persistence formats, error semantics, authorization, ordering, and side effects. Lack of evidence of a consumer is not proof that a public contract is unused.
