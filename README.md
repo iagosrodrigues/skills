@@ -37,6 +37,8 @@ claude plugin install noam-plugin@noam
 
 - [`no-comments`](skills/no-comments/SKILL.md) reviews comment quality with an independent reader, removes confirmed noise, preserves meaningful rationale and tool directives, and proves constraint enforcement before dropping reminders.
 
+- [`setup`](skills/setup/SKILL.md) configures one shared model and reasoning effort per role in a project-local `.noam.json`, with a managed project-instruction block for discovery and explicit runtime capability checks.
+
 Example request after loading `how`:
 
 ```text
@@ -133,6 +135,14 @@ Proponha guardrails para restrições importantes; não refatore o produto ainda
 Verifique o que os comentários alterados influenciam.
 ```
 
+Example request after loading `setup`:
+
+```text
+Configure o noam neste projeto com o modelo da sessão para todas as funções.
+Quero effort high por padrão e medium para exploração e escrita.
+Confira o que o ambiente suporta e mostre qualquer fallback necessário.
+```
+
 These skills use shared `SKILL.md` instructions for Codex and Claude Code, without Cursor-specific tool names or model identifiers.
 
 `how` is adapted from [pstack's how skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/how/SKILL.md) and its explanation templates, by Lauren Tan. The upstream [MIT license](skills/how/LICENSE) is preserved alongside the skill.
@@ -187,6 +197,8 @@ os comportamentos antes de propor a implementação.
 These six principles are adapted from Lauren Tan's pstack principles: [`principle-minimize-reader-load`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-minimize-reader-load/SKILL.md) ([MIT license](skills/principle-minimize-reader-load/LICENSE)), [`principle-laziness-protocol`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-laziness-protocol/SKILL.md) ([MIT license](skills/principle-laziness-protocol/LICENSE)), [`principle-subtract-before-you-add`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-subtract-before-you-add/SKILL.md) ([MIT license](skills/principle-subtract-before-you-add/LICENSE)), [`principle-model-the-domain`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-model-the-domain/SKILL.md) ([MIT license](skills/principle-model-the-domain/LICENSE)), [`principle-boundary-discipline`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-boundary-discipline/SKILL.md) ([MIT license](skills/principle-boundary-discipline/LICENSE)), [`principle-test-behavior-not-implementation`](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-test-behavior-not-implementation/SKILL.md) ([MIT license](skills/principle-test-behavior-not-implementation/LICENSE)). Runtime trust, compatibility, and task scope qualify the upstream absolutes.
 
 `no-comments` is adapted from [pstack's no-comments workflow](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/no-comments/SKILL.md) and [Comment Sicko reviewer](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/agents/comment-sicko.md), by Lauren Tan. Its upstream [MIT license](skills/no-comments/LICENSE) is preserved alongside the skill. The port retains independent review while using evidence-based deletion, preserving unresolved constraints and tool-consumed comments.
+
+`setup` is adapted from [pstack's setup-pstack skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/setup-pstack/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/setup/LICENSE) is preserved alongside the skill. This port uses one shared model and separate effort settings, with project instruction discovery instead of a platform-specific global rule.
 
 ## Layout
 
