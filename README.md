@@ -226,6 +226,7 @@ These are canonical principle skills, usable directly or loaded on demand by wor
 | Principle | Decision it helps make |
 | --- | --- |
 | [Type system discipline](skills/principle-type-system-discipline/SKILL.md) | Reject invalid states and semantic mix-ups through types and authoritative schemas. |
+| [Make operations idempotent](skills/principle-make-operations-idempotent/SKILL.md) | Make repeated and interrupted operations converge without duplicating effects. |
 | [Attack the premise](skills/principle-attack-the-premise/SKILL.md) | Test the shared assumption behind repeated failed corrections before another patch. |
 | [Fix root causes](skills/principle-fix-root-causes/SKILL.md) | Trace the earliest demonstrated contract violation while retaining legitimate safeguards. |
 | [Minimize reader load](skills/principle-minimize-reader-load/SKILL.md) | Reduce unnecessary indirection and hidden mutable context. |

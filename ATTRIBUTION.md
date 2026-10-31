@@ -47,3 +47,5 @@ These six principles are adapted from Lauren Tan's pstack principles: [`principl
 `principle-attack-the-premise` is adapted from [pstack's Attack the premise principle](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-attack-the-premise/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/principle-attack-the-premise/LICENSE) is preserved alongside the skill.
 
 `principle-type-system-discipline` is adapted from [pstack’s Type system discipline principle](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-type-system-discipline/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/principle-type-system-discipline/LICENSE) is preserved alongside the skill.
+
+`principle-make-operations-idempotent` is adapted from [pstack’s Make operations idempotent principle](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/principle-make-operations-idempotent/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/principle-make-operations-idempotent/LICENSE) is preserved alongside the skill.
