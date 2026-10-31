@@ -35,7 +35,7 @@ claude plugin install noam-plugin@noam
 
 - [`guide-me`](skills/guide-me/SKILL.md) guides an end-to-end task through the relevant bundled workflows, from onboarding to verified delivery.
 
-- [`no-comments`](skills/no-comments/SKILL.md) reviews comment quality with an independent reader, removes confirmed noise, preserves meaningful rationale and tool directives, and proves constraint enforcement before dropping reminders.
+- [`no-comments`](skills/no-comments/SKILL.md) applies strict comment deletion with a narrow keep list, an independent editing reviewer, scoped root-cause fixes, and explicit reporting of unenforced constraints.
 
 - [`setup`](skills/setup/SKILL.md) configures one shared model and reasoning effort per role in a project-local `.noam.json`, with a managed project-instruction block for discovery and explicit runtime capability checks.
 
@@ -140,11 +140,11 @@ Sou novo neste projeto. Guie-me até implementar [objetivo]: explique o fluxo re
 Example request after loading `no-comments`:
 
 ```text
-Revise os comentários do diff com um subagente independente.
-Remova narração redundante e corrija afirmações comprovadamente obsoletas.
-Preserve razões úteis, contratos, avisos ainda não resolvidos e diretivas.
-Proponha guardrails para restrições importantes; não refatore o produto ainda.
-Verifique o que os comentários alterados influenciam.
+Aplique no-comments ao diff com um revisor independente.
+Mantenha apenas comentários que comprovem uma exceção da lista estrita.
+Remova os demais e corrija as causas dos achados dentro do escopo.
+Mostre propostas de guardrails antes de aplicá-las e informe restrições
+que continuarem sem proteção. Execute as verificações relevantes.
 ```
 
 Example request after loading `setup`:
