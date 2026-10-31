@@ -20,6 +20,7 @@ Bundled skills are sibling directories. Resolve them relative to this file as `.
 | Situation | Workflow |
 | --- | --- |
 | New contributor or unfamiliar subsystem | `how`: trace a representative flow, ownership, prerequisites, and verification commands. |
+| Historical rationale, unexplained constraints, or a decision to revisit | `why`: investigate recorded reasons and tradeoffs before treating current behavior as evidence of intent. |
 | Nontrivial architecture or ownership decision | `architect`: ground the design, explore distinct shapes, and synthesize usage and types. |
 | Competing artifact approaches | `arena`: generate independently, judge, synthesize, and verify. |
 | Independent task slices worth parallelizing | `swarm`: assign ownership, isolate writes and runtime state, integrate and check. |

@@ -39,6 +39,8 @@ claude plugin install noam-plugin@noam
 
 - [`setup`](skills/setup/SKILL.md) configures one shared model and reasoning effort per role in a project-local `.noam.json`, with a managed project-instruction block for discovery and explicit runtime capability checks.
 
+- [`why`](skills/why/SKILL.md) investigates historical rationale through parallel source readers and independent synthesis, with cited confidence levels and explicit coverage gaps.
+
 Example request after loading `how`:
 
 ```text
@@ -143,6 +145,14 @@ Quero effort high por padrão e medium para exploração e escrita.
 Confira o que o ambiente suporta e mostre qualquer fallback necessário.
 ```
 
+Example request after loading `why`:
+
+```text
+Investigue por que [decisão ou trecho] foi implementado dessa forma.
+Use o histórico e as fontes disponíveis, com investigadores em paralelo.
+Separe motivos documentados, inferências e lacunas. Não altere o código.
+```
+
 These skills use shared `SKILL.md` instructions for Codex and Claude Code, without Cursor-specific tool names or model identifiers.
 
 `how` is adapted from [pstack's how skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/how/SKILL.md) and its explanation templates, by Lauren Tan. The upstream [MIT license](skills/how/LICENSE) is preserved alongside the skill.
@@ -199,6 +209,8 @@ These six principles are adapted from Lauren Tan's pstack principles: [`principl
 `no-comments` is adapted from [pstack's no-comments workflow](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/no-comments/SKILL.md) and [Comment Sicko reviewer](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/agents/comment-sicko.md), by Lauren Tan. Its upstream [MIT license](skills/no-comments/LICENSE) is preserved alongside the skill. The port retains independent review while using evidence-based deletion, preserving unresolved constraints and tool-consumed comments.
 
 `setup` is adapted from [pstack's setup-pstack skill](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/setup-pstack/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/setup/LICENSE) is preserved alongside the skill. This port uses one shared model and separate effort settings, with project instruction discovery instead of a platform-specific global rule.
+
+`why` is adapted from [pstack's why skill and references](https://github.com/cursor/plugins/blob/1ba91fc25c0977741dd0e267849e6234b037ed0a/pstack/skills/why/SKILL.md), by Lauren Tan. Its upstream [MIT license](skills/why/LICENSE) is preserved alongside the skill.
 
 ## Layout
 

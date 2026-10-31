@@ -9,7 +9,7 @@ Track grounding, sketching, agreement when requested, implementation when author
 
 ## Ground
 
-Read repository instructions and trace the affected flows, callers, state owners, interfaces, and checks. Use the bundled `how` skill when available, or perform that source-grounded investigation directly. Existing ownership rationale needs historical evidence; do not infer motivation from current code alone. Skip this phase only for genuinely greenfield work without surrounding integration.
+Read repository instructions and trace the affected flows, callers, state owners, interfaces, and checks. Use the bundled `how` skill when available, or perform that source-grounded investigation directly. For historical ownership rationale, use the bundled `why` skill when available. Historical motivation needs evidence beyond current code; preserve unresolved constraints as explicit gaps. Skip this phase only for genuinely greenfield work without surrounding integration.
 
 Identify the desired behavior and constraints, including compatibility and migration needs. Mark unresolved product decisions separately from facts that can be learned through source inspection or a small authorized experiment. Avoid asking the user to decide an empirical question that can be tested.
 
