@@ -19,6 +19,7 @@ Bundled skills are sibling directories. Resolve them relative to this file as `.
 
 | Situation | Workflow |
 | --- | --- |
+| Learning a change or subsystem through a conversational explanation | `teach`: combine how and why, preserve confidence, and build understanding at the reader’s pace. |
 | New contributor or unfamiliar subsystem | `how`: trace a representative flow, ownership, prerequisites, and verification commands. |
 | Historical rationale, unexplained constraints, or a decision to revisit | `why`: investigate recorded reasons and tradeoffs before treating current behavior as evidence of intent. |
 | Nontrivial architecture or ownership decision | `architect`: ground the design, explore distinct shapes, and synthesize usage and types. |

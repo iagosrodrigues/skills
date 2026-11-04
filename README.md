@@ -13,6 +13,8 @@ claude plugin install noam-plugin@noam
 
 ## Skills
 
+- [`teach`](skills/teach/SKILL.md) combines how and why into a plain explanation at the reader’s pace, preserving evidence and uncertainty.
+
 - [`how`](skills/how/SKILL.md) explains existing code, traces a user or runtime flow, and identifies module ownership and extension points. It works directly by default, with optional delegation when supported and authorized. It requires no model configuration or sibling skills.
 
 - [`prove-it-works`](skills/prove-it-works/SKILL.md) verifies a result against the actual app, code, or artifact. It uses proportional checks, reports evidence and gaps, and requires no model configuration or sibling skills.
@@ -52,6 +54,14 @@ claude plugin install noam-plugin@noam
 - [`technical-writing`](skills/technical-writing/SKILL.md) structures technical documents around the reader's task and checks instructions, terminology, and factual claims.
 
 - [`unslop`](skills/unslop/SKILL.md) edits prose for clarity and specificity while preserving meaning, literal technical content, evidence, and uncertainty.
+
+Example request after loading `teach`:
+
+```text
+Me ensine como funciona o fluxo [X] e por que ele foi desenhado assim.
+Comece pelo essencial e use um exemplo concreto. Separe o que está
+registrado no histórico do que é inferência. Não altere o projeto.
+```
 
 Example request after loading `how`:
 
