@@ -19,6 +19,7 @@ Bundled skills are sibling directories. Resolve them relative to this file as `.
 
 | Situation | Workflow |
 | --- | --- |
+| New or deliberately changed behavior | Read [the feature playbook](references/feature.md): define the data shape, plan ownership and dependencies, delegate implementation, review, and verify the integrated result. |
 | Learning a change or subsystem through a conversational explanation | `teach`: combine how and why, preserve confidence, and build understanding at the reader’s pace. |
 | New contributor or unfamiliar subsystem | `how`: trace a representative flow, ownership, prerequisites, and verification commands. |
 | Historical rationale, unexplained constraints, or a decision to revisit | `why`: investigate recorded reasons and tradeoffs before treating current behavior as evidence of intent. |
@@ -53,7 +54,7 @@ For commands, jobs, or lifecycle changes that must survive retries or partial fa
 
 For debugging, read [fix root causes](../principle-fix-root-causes/SKILL.md) when the causal origin or need for a guard is unclear.
 
-For a bug, reproduce the reported behavior when practical, establish the intended contract, trace the cause, make a scoped correction, and repeat the scenario. Distinguish setup failures from product defects. For a feature, define observable acceptance criteria and the data shape before implementing. For a refactor, verify behavior remains equivalent through affected public interfaces. A design-only or read-only task stays within those bounds.
+For a bug, reproduce the reported behavior when practical, establish the intended contract, trace the cause, make a scoped correction, and repeat the scenario. Distinguish setup failures from product defects. A feature deliberately adds or changes behavior; restoring an existing contract is a bug fix. For a refactor, verify behavior remains equivalent through affected public interfaces. A design-only or read-only task stays within those bounds.
 
 Delegate only independent work with self-contained briefs, target state, file ownership, execution boundaries, evidence expectations, and a completion condition. Never let concurrent workers silently share write paths or mutable app state. Review delegated outputs and run checks against the integrated result. Model agreement does not replace execution evidence.
 

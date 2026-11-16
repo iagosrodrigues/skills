@@ -35,7 +35,7 @@ claude plugin install noam-plugin@noam
 
 - [`show-me-your-work`](skills/show-me-your-work/SKILL.md) keeps an append-only decision trail, audits evidence, and requests independent review before handoff.
 
-- [`guide-me`](skills/guide-me/SKILL.md) guides an end-to-end task through the relevant bundled workflows, from onboarding to verified delivery.
+- [`guide-me`](skills/guide-me/SKILL.md) guides an end-to-end task through the relevant bundled workflows, with a feature playbook covering data shape, work ownership, implementation, review, and verification.
 
 - [`code-gardening`](skills/code-gardening/SKILL.md) makes one evidence-backed maintenance improvement at a time, applies the relevant principles, and verifies preserved behavior and reduced reader load.
 
@@ -146,7 +146,11 @@ Mantenha uma trilha de decisões para esta tarefa, com evidências. Antes de enc
 Example request after loading `guide-me`:
 
 ```text
-Sou novo neste projeto. Guie-me até implementar [objetivo]: explique o fluxo relevante, escolha as etapas necessárias, implemente e verifique. Avance no trabalho local e me consulte nas decisões de produto que estiverem faltando.
+Guie-me na implementação da feature [objetivo]. Trace o fluxo afetado, defina
+o modelo de dados e os critérios de aceitação. Registre dependências, frentes
+independentes, estado compartilhado e a menor divisão segura do trabalho.
+Delegue a implementação, revise o resultado e verifique a jornada real.
+Avance no trabalho local e consulte-me nas decisões de produto que faltarem.
 ```
 
 Example request after loading `code-gardening`:
@@ -227,7 +231,7 @@ Preserve os fatos, as condições, as referências e o grau de certeza.
 
 These skills use shared `SKILL.md` instructions for Codex and Claude Code, without Cursor-specific tool names or model identifiers.
 
-`guide-me` composes the ported workflows; it does not include the upstream mode's full playbook suite or platform-specific automation.
+`guide-me` composes the ported workflows and includes an adapted [Feature playbook](skills/guide-me/references/feature.md) from poteto-mode. Other upstream playbooks and platform-specific automation are not bundled.
 
 ## Code-quality principles
 
