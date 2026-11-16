@@ -272,7 +272,3 @@ os comportamentos antes de propor a implementação.
 - `.agents/plugins/marketplace.json` + `.codex-plugin/plugin.json` — Codex equivalents
 - `skills/<name>/SKILL.md` — skills
 - `commands/<name>.md` — slash commands
-
-## Attribution
-
-Adapted from Lauren Tan’s pstack. See [upstream sources and license notices](ATTRIBUTION.md).
