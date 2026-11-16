@@ -29,7 +29,9 @@ Give the implementation owner the goal, source locations, chosen data shape, acc
 
 When materially different implementation approaches need comparison, use [arena](../../arena/SKILL.md) with isolated candidates and explicit judging criteria. Do not turn routine implementation choices into a competition.
 
-Keep the working product usable as each increment lands. For dependent units, read [sequence verifiable units](../../principle-sequence-verifiable-units/SKILL.md) and check each prerequisite before starting the next. When replacing an internal API, update controlled callers and remove the obsolete path in the same scoped change; do not add compatibility wrappers or temporary fallback implementations. Check every affected consumer of a changed shared primitive.
+Keep the working product usable as each increment lands. For dependent units, read [sequence verifiable units](../../principle-sequence-verifiable-units/SKILL.md) and check each prerequisite before starting the next. Check every affected consumer of a changed shared primitive.
+
+When replacing an internal API, read and follow [migrate callers then delete legacy APIs](../../principle-migrate-callers-then-delete-legacy-apis/SKILL.md) for consumer discovery, coordinated replacement, and deletion criteria. Explicit user and repository instructions take precedence over its compatibility guidance. If they prohibit compatibility layers and discovery exposes consumers outside the coordinated change, establish the impact and authorized scope before deletion; do not add a wrapper or assume those consumers can be broken.
 
 Review the actual diff against the brief and acceptance criteria before accepting the delegate's report. Resolve findings within scope and review the resulting changes again. For a consequential contested design, use [interrogate](../../interrogate/SKILL.md) before delivery.
 
