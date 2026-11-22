@@ -1,6 +1,6 @@
 # noam
 
-Personal Claude Code (and Codex) plugin marketplace by Iago Sousa. It ships a single plugin, `noam-plugin`, which bundles the skills and commands I use day to day.
+Personal Claude Code, Codex, and Antigravity plugin repository by Iago Sousa. It ships a single plugin, `noam-plugin`, which bundles the skills and commands I use day to day.
 
 ## Install
 
@@ -9,6 +9,12 @@ Claude Code:
 ```sh
 claude plugin marketplace add iagosrodrigues/skills
 claude plugin install noam-plugin@noam
+```
+
+Antigravity:
+
+```sh
+agy plugin install https://github.com/iagosrodrigues/skills
 ```
 
 ## Skills
@@ -229,7 +235,7 @@ Revise este texto para remover linguagem vaga, repetição e jargão desnecessá
 Preserve os fatos, as condições, as referências e o grau de certeza.
 ```
 
-These skills use shared `SKILL.md` instructions for Codex and Claude Code, without Cursor-specific tool names or model identifiers.
+These skills use shared `SKILL.md` instructions for Codex, Claude Code, and Antigravity, without Cursor-specific tool names or model identifiers.
 
 `guide-me` composes the ported workflows and includes an adapted [Feature playbook](skills/guide-me/references/feature.md) from poteto-mode. Other upstream playbooks and platform-specific automation are not bundled.
 
@@ -270,5 +276,6 @@ os comportamentos antes de propor a implementação.
 - `.claude-plugin/marketplace.json` — Claude Code marketplace manifest
 - `.claude-plugin/plugin.json` — Claude Code plugin manifest
 - `.agents/plugins/marketplace.json` + `.codex-plugin/plugin.json` — Codex equivalents
+- `.antigravity-plugin/plugin.json` — Antigravity plugin manifest
 - `skills/<name>/SKILL.md` — skills
 - `commands/<name>.md` — slash commands

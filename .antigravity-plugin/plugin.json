@@ -1,0 +1,13 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "noam-plugin",
+  "displayName": "Noam",
+  "version": "1.0.0",
+  "description": "just my collection of skills and commands.",
+  "author": {
+    "name": "Iago Sousa"
+  },
+  "homepage": "https://github.com/iagosrodrigues/skills",
+  "repository": "https://github.com/iagosrodrigues/skills",
+  "license": "MIT"
+}
